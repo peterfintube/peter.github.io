@@ -32,6 +32,11 @@
             padding: 20px;
         }
         
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
         header {
             display: flex;
             justify-content: space-between;
@@ -87,11 +92,6 @@
             background: linear-gradient(45deg, var(--primary), var(--secondary));
         }
         
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
         .opportunities-section {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
@@ -105,6 +105,7 @@
             background: rgba(0, 0, 0, 0.2);
             border-radius: 12px;
             overflow: hidden;
+            margin: 20px 0;
         }
         
         .opportunity-table th {
@@ -146,6 +147,13 @@
         .hidden {
             display: none;
         }
+        
+        .section-title {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
@@ -159,12 +167,13 @@
                 <div class="tab active" data-tab="dashboard">Dashboard</div>
                 <div class="tab" data-tab="ai">AI Scanner</div>
                 <div class="tab" data-tab="history">Trade History</div>
+                <div class="tab" data-tab="ai-analysis">AI Analysis</div>
             </div>
         </header>
         
         <div id="dashboard" class="tab-content">
             <div class="opportunities-section">
-                <h2 style="color: white; margin-bottom: 20px;">Top 20 Highest Profit Opportunities</h2>
+                <h2 class="section-title">Top 20 Highest Profit Opportunities</h2>
                 <table class="opportunity-table">
                     <thead>
                         <tr>
@@ -297,15 +306,29 @@
         
         <div id="ai" class="tab-content hidden">
             <div class="opportunities-section">
-                <h2 style="color: white;">AI Scanner</h2>
-                <p style="color: var(--gray);">Configure AI parameters and start scanning for new opportunities.</p>
+                <h2 class="section-title">AI Scanner</h2>
+                <p style="color: var(--gray); font-size: 16px;">Configure AI parameters and start scanning for new opportunities.</p>
             </div>
         </div>
         
         <div id="history" class="tab-content hidden">
             <div class="opportunities-section">
-                <h2 style="color: white;">Trade History</h2>
-                <p style="color: var(--gray);">Your past trades will appear here.</p>
+                <h2 class="section-title">Trade History</h2>
+                <p style="color: var(--gray); font-size: 16px;">Your past trades will appear here.</p>
+            </div>
+        </div>
+
+        <div id="ai-analysis" class="tab-content hidden">
+            <div class="opportunities-section">
+                <h2 class="section-title">🤖 AI Analysis</h2>
+                <p style="color: var(--gray); font-size: 16px;">Our AI scans 100+ technical indicators across multiple timeframes to find high-confidence opportunities.</p>
+                <ul style="color: var(--gray); font-size: 16px; padding-left: 20px; margin-top: 20px;">
+                    <li>📈 Moving Averages (50, 100, 200)</li>
+                    <li>📊 RSI, MACD, Bollinger Bands</li>
+                    <li>🌊 Volume Profile & Liquidity Zones</li>
+                    <li>🧠 Machine Learning Pattern Recognition</li>
+                    <li>🌐 Cross-market Correlation Analysis</li>
+                </ul>
             </div>
         </div>
     </div>
