@@ -294,16 +294,11 @@
             display: inline-block;
         }
 
-        /* Updated Price Highlight */
+        /* GitHub-Safe Price Highlight (NO animations) */
         .price-updated {
             background: rgba(76, 175, 80, 0.3) !important;
-            animation: pulse 2s ease-in-out;
-        }
-
-        @keyframes pulse {
-            0% { background: rgba(76, 175, 80, 0.3); }
-            50% { background: rgba(76, 175, 80, 0.1); }
-            100% { background: rgba(76, 175, 80, 0.3); }
+            font-weight: bold;
+            border: 1px solid rgba(76, 175, 80, 0.5);
         }
     </style>
 </head>
